@@ -50,6 +50,11 @@ wget -P /build/software/maven https://archive.apache.org/dist/maven/maven-3/3.3.
 && rm /build/software/maven/apache-maven-3.3.9-bin.tar.gz
 
 RUN \
+wget -P /build/software/maven https://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz \
+&& tar -xvzf /build/software/maven/apache-maven-3.6.3-bin.tar.gz --directory /build/software/maven \
+&& rm /build/software/maven/apache-maven-3.6.3-bin.tar.gz
+
+RUN \
 wget -P /build/software/maven https://archive.apache.org/dist/maven/maven-2/2.2.1/binaries/apache-maven-2.2.1-bin.tar.gz \
 && tar -xvzf /build/software/maven/apache-maven-2.2.1-bin.tar.gz --directory /build/software/maven \
 && rm /build/software/maven/apache-maven-2.2.1-bin.tar.gz
